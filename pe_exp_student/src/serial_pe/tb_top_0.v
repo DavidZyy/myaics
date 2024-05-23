@@ -30,10 +30,10 @@ reg [ 31:0] result[3:0];
 
 initial
 begin
-  $readmemh("../../data/inst", inst);
-  $readmemh("../../data/neuron", neuron);
-  $readmemh("../../data/weight", weight);
-  $readmemb("../../data/result", result);
+  $readmemh("../../data_gen/inst", inst);
+  $readmemh("../../data_gen/neuron", neuron);
+  $readmemh("../../data_gen/weight", weight);
+  $readmemh("../../data_gen/result", result);
 end
 
 reg [ 1:0]   inst_addr;
@@ -56,8 +56,8 @@ always@(posedge clk or negedge rst_n) begin
     pe_vld_i <= 1'b0;
   end else if((inst_addr == 2'h0) && (neuron_addr == 16'h0) && (weight_addr == 16'h0)) begin
     pe_vld_i <= 1'b1;
-  end else if(pe_ctl[1] && pe_vld_i && (inst_addr != 2'h3)) begin
-    pe_vld_i <= 1'b0;
+  // end else if(pe_ctl[1] && pe_vld_i && (inst_addr != 2'h3)) begin
+    // pe_vld_i <= 1'b0;
   end
 end
 

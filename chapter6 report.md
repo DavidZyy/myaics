@@ -154,11 +154,21 @@ endmodule
 
 最终结果正确。
 
-使用给出的顶层模块和数据进行测试，测试结果如下：
+使用给出的顶层模块和数据进行了多次的测试，测试结果如下：
 
-![image-20240516094502781](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240516094502781.png)
+![image-20240523153946924](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523153946924.png)
+
+![image-20240523154052761](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523154052761.png)
+
+![image-20240523154118895](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523154118895.png)
+
+
 
 由图可见，测试结果正确。
+
+波形图如下：
+
+![image-20240523160241949](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523160241949.png)
 
 # 并行内积运算器
 
@@ -229,13 +239,23 @@ wire [31:0] psum_d = {32{~ctl[0]}} & psum_r + acc_result;
 
 ## 仿真测试
 
-测试通过
+一共进行了3组测试，结果都通过了，如下截图所示：
 
-![image-20240516101807756](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240516101807756.png)
+![image-20240523154343694](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523154343694.png)
+
+
+
+![image-20240523154404406](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523154404406.png)
+
+
+
+![image-20240523154432842](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523154432842.png)
 
 波形文件
 
 ![image-20240516101838126](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240516101838126.png)
+
+![image-20240523160310306](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523160310306.png)
 
 # 矩阵运算子单元
 
@@ -323,9 +343,21 @@ assign wram_mpe_weight_ready = inst_vld && nram_mpe_neuron_valid;  /* TODO */
 
 ## 仿真测试
 
-测试通过
+进行了3组测试，都通过了。
 
-![image-20240516105106234](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240516105106234.png)
+![image-20240523161328081](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523161328081.png)
+
+![image-20240523161354681](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523161354681.png)
+
+![image-20240523161410730](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523161410730.png)
+
+
+
+波形文件如下：
+
+![image-20240523160346033](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523160346033.png)
+
+![image-20240523161437352](https://raw.githubusercontent.com/DavidZyy/img_bed_2/main/images/image-20240523161437352.png)
 
 # 工程说明
 

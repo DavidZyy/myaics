@@ -73,8 +73,11 @@ parallel_pe u_parallel_pe (
 );
 
 
-assign nram_mpe_neuron_ready = inst_vld && wram_mpe_weight_valid;  /* TODO */
-assign wram_mpe_weight_ready = inst_vld && nram_mpe_neuron_valid;  /* TODO */
+// assign nram_mpe_neuron_ready = inst_vld && wram_mpe_weight_valid;  /* TODO */
+// assign wram_mpe_weight_ready = inst_vld && nram_mpe_neuron_valid;  /* TODO */
+
+assign nram_mpe_neuron_ready = inst_vld && wram_mpe_weight_valid && ~pe_vld_o;  /* TODO */
+assign wram_mpe_weight_ready = inst_vld && nram_mpe_neuron_valid && ~pe_vld_o;  /* TODO */
 
 assign result = pe_result;
 assign vld_o = pe_vld_o;

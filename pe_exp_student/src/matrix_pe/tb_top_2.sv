@@ -15,6 +15,10 @@ initial begin
     #10 rst_n = 1'b1;
 end
 initial begin
+    $dumpfile("tb_top_2.vcd");
+    $dumpvars(0, tb_top_2);
+end
+initial begin
 //    $fsdbDumpfile("test.fsdb");
 //    $fsdbDumpvars(0, tb_top_2);
 end
@@ -30,10 +34,10 @@ reg [ 31:0] result[3:0];
 
 initial
 begin
-  $readmemh("../../data/inst", inst);
-  $readmemh("../../data/neuron", neuron);
-  $readmemh("../../data/weight", weight);
-  $readmemb("../../data/result", result);
+  $readmemh("../../data_gen/inst", inst);
+  $readmemh("../../data_gen/neuron", neuron);
+  $readmemh("../../data_gen/weight", weight);
+  $readmemh("../../data_gen/result", result);
 end
 
 reg [ 1:0]   inst_addr;

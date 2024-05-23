@@ -62,7 +62,7 @@ def verctor_gen(pfr, nfr, sfr, iter):
     nfr.write(neu_str+"\n")
     sfr.write(syn_str+"\n")
   
-  pfr.write(num2str(partsum, 0, 32)+"\n")
+  pfr.write(num2str(partsum, 1, 8)+"\n")
 
 
 #if __name__ == "__main_":
